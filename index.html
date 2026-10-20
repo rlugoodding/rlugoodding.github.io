@@ -305,7 +305,7 @@
           <form class="askbox" id="askForm" role="search">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
             <input id="askInput" type="text" autocomplete="off"
-              placeholder="Ask about AI agents, websites, eCommerce…"
+              placeholder="Ask about AI agents, websites, automation…"
               aria-label="Ask Goodding a question" />
             <button type="submit">Ask <span aria-hidden="true">&rarr;</span></button>
           </form>
@@ -314,7 +314,6 @@
             <button type="button" data-q="What AI agents can you build for my business?">What AI agents can you build?</button>
             <button type="button" data-q="Can you answer customer questions using my own documents?">Answer questions from my documents</button>
             <button type="button" data-q="Can you migrate and redesign my website?">Migrate &amp; redesign my website</button>
-            <button type="button" data-q="Can you add eCommerce to my site?">Add eCommerce</button>
             <button type="button" data-q="How does a project with Goodding work?">How does a project work?</button>
           </div>
 
@@ -337,7 +336,7 @@
           <h2 class="section-title">Popular services</h2>
           <p class="section-sub">
             The work we do most: taking a business from a static website to one that
-            answers, sells, and follows up on its own — with a person approving every launch.
+            answers and follows up on its own — with a person approving every launch.
           </p>
           <div class="cards">
             <article class="card">
@@ -378,15 +377,6 @@
 
             <article class="card">
               <div class="icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h2l2.6 12.5a2 2 0 0 0 2 1.5h8.7a2 2 0 0 0 2-1.6L21.5 7H6"/></svg>
-              </div>
-              <h3>eCommerce</h3>
-              <p>Add a store to your site — products, checkout, and order flow — launched only after you have reviewed it end to end in staging.</p>
-              <button class="link" type="button" data-q="Can you add eCommerce to my site?">Ask about this &rarr;</button>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3z"/></svg>
               </div>
               <h3>Care &amp; ongoing support</h3>
@@ -414,7 +404,7 @@
             <div class="step">
               <span class="num">Step 2</span>
               <h3>Your approval</h3>
-              <p>You review each phase — migration, redesign, each agent, the store — and approve it before the next one starts.</p>
+              <p>You review each phase — migration, redesign, each agent — and approve it before the next one starts.</p>
             </div>
             <div class="step">
               <span class="num">Step 3</span>
@@ -466,7 +456,6 @@
               <li><a href="#services">AI agents</a></li>
               <li><a href="#services">Knowledge assistants</a></li>
               <li><a href="#services">Website migration &amp; redesign</a></li>
-              <li><a href="#services">eCommerce</a></li>
             </ul>
           </div>
           <div class="foot-col">
@@ -505,11 +494,6 @@
           body: "<strong>Yes.</strong> A typical engagement runs in phases: <ul><li><strong>Migration</strong> — move the site to a modern platform with configuration, content, and redirects carried over.</li><li><strong>Redesign</strong> — a clean rebuild of layout and pages, reviewed by you in staging.</li><li><strong>Monitoring</strong> — a watch period after launch to catch anything the move shook loose.</li></ul>Your live site stays up until the new one is approved."
         },
         {
-          keys: ["ecommerce", "e-commerce", "store", "shop", "sell", "checkout", "products"],
-          title: "Adding eCommerce",
-          body: "<strong>Yes.</strong> We can add a full store to your site — product catalog, checkout, and order flow. The store is built in staging so you can place test orders and review every step before it opens to customers."
-        },
-        {
           keys: ["marketing", "sales", "lead", "campaign", "follow up", "follow-up"],
           title: "Marketing & sales agents",
           body: "<strong>Yes.</strong> After your website agent is stable, we add agents in waves: marketing agents that draft and schedule campaigns, and sales agents that follow up with leads and keep inquiries from going cold. Each wave is reviewed and stabilized before the next begins, so automation never runs ahead of your approval."
@@ -517,7 +501,7 @@
         {
           keys: ["after", "launch", "support", "maintenance", "monitor", "care"],
           title: "After launch",
-          body: "<strong>Launch is the midpoint, not the end.</strong> Every go-live is followed by a monitoring period, then a stabilization phase where agents are tuned against real questions. After that, ongoing IT support keeps the site, agents, and store running — updates, fixes, and improvements handled for you."
+          body: "<strong>Launch is the midpoint, not the end.</strong> Every go-live is followed by a monitoring period, then a stabilization phase where agents are tuned against real questions. After that, ongoing IT support keeps the site and agents running — updates, fixes, and improvements handled for you."
         },
         {
           keys: ["work", "process", "start", "step", "timeline", "long", "project"],
@@ -532,11 +516,11 @@
         {
           keys: ["who", "about", "company", "goodding"],
           title: "About Goodding LLC",
-          body: "<strong>Goodding LLC</strong> is an AI technology company. We migrate and redesign business websites, build AI agents grounded in your own content, add eCommerce, and support it all after launch. Our working rule: staged builds, your approval at every gate, and honest limits — we never guarantee rankings, traffic, or placement in AI answers."
+          body: "<strong>Goodding LLC</strong> is an AI technology company. We migrate and redesign business websites, build AI agents grounded in your own content, and support it all after launch. Our working rule: staged builds, your approval at every gate, and honest limits — we never guarantee rankings, traffic, or placement in AI answers."
         }
       ];
 
-      var FALLBACK = "I can help with questions about Goodding&rsquo;s work: <strong>AI agents</strong> for your website, <strong>knowledge assistants</strong> that answer from your documents, <strong>website migration &amp; redesign</strong>, <strong>marketing &amp; sales agents</strong>, <strong>eCommerce</strong>, <strong>pricing</strong>, and <strong>what happens after launch</strong>. Try one of the suggested questions above.";
+      var FALLBACK = "I can help with questions about Goodding&rsquo;s work: <strong>AI agents</strong> for your website, <strong>knowledge assistants</strong> that answer from your documents, <strong>website migration &amp; redesign</strong>, <strong>marketing &amp; sales agents</strong>, <strong>pricing</strong>, and <strong>what happens after launch</strong>. Try one of the suggested questions above.";
 
       var form = document.getElementById("askForm");
       var input = document.getElementById("askInput");
