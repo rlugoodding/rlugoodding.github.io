@@ -256,6 +256,46 @@
         font-size: 0.83rem; display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between;
       }
 
+      /* ---------- Login ---------- */
+      .login {
+        background:
+          radial-gradient(900px 380px at 50% -120px, var(--blue-wash), transparent 70%),
+          var(--paper);
+        padding: 72px 0 88px;
+      }
+      .login-card {
+        max-width: 420px; margin: 0 auto;
+        background: var(--paper); border: 1px solid var(--line);
+        border-radius: 16px; box-shadow: var(--shadow);
+        padding: 34px 32px 28px;
+      }
+      .login-card h1 { margin: 0 0 6px; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.01em; }
+      .login-sub { margin: 0 0 24px; color: var(--ink-soft); font-size: 0.96rem; }
+      .login-card label { display: block; font-weight: 600; font-size: 0.92rem; margin: 0 0 6px; }
+      .login-card input {
+        width: 100%; font: inherit; color: var(--ink);
+        background: var(--paper); border: 1px solid var(--line);
+        border-radius: 8px; padding: 12px 14px; margin: 0 0 18px;
+      }
+      .login-card input::placeholder { color: var(--ink-faint); }
+      .login-card button[type="submit"] {
+        width: 100%; border: 0; cursor: pointer;
+        background: var(--blue); color: #fff;
+        font: inherit; font-weight: 700; font-size: 1rem;
+        padding: 13px 22px; border-radius: 10px;
+      }
+      .login-card button[type="submit"]:hover { background: var(--blue-dark); }
+      .login-msg {
+        display: none; margin: 18px 0 0;
+        background: var(--blue-wash); color: var(--ink-soft);
+        border-radius: 8px; padding: 12px 14px; font-size: 0.92rem;
+      }
+      .login-msg.show { display: block; }
+      .login-msg strong { color: var(--ink); }
+      .login-alt { margin: 22px 0 0; font-size: 0.92rem; color: var(--ink-soft); }
+      .login-back { margin: 10px 0 0; font-size: 0.92rem; }
+      .login-back a, .login-alt a { font-weight: 600; }
+
       @media (max-width: 640px) {
         .hero { padding: 44px 0 22px; }
         .askbox { padding-left: 14px; }
@@ -286,7 +326,7 @@
           <a href="#services">Services</a>
           <a href="#how">How it works</a>
           <a href="#about">About</a>
-          <a class="cta" href="#ask">Ask Goodding</a>
+          <a class="cta" href="#login" id="loginLink">Login</a>
         </nav>
       </div>
     </header>
@@ -443,6 +483,28 @@
       </section>
     </main>
 
+    <!-- Login view -->
+    <div id="loginView" hidden>
+      <section class="login">
+        <div class="wrap">
+          <div class="login-card">
+            <h1>Log in</h1>
+            <p class="login-sub">Client accounts for reviewing staging builds, approving phases, and reading agent reports.</p>
+            <form id="loginForm">
+              <label for="loginEmail">Email address</label>
+              <input id="loginEmail" type="email" autocomplete="username" required placeholder="you@company.com" />
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Your password" />
+              <button type="submit">Log in</button>
+              <p class="login-msg" id="loginMsg" role="status" aria-live="polite"></p>
+            </form>
+            <p class="login-alt">New to Goodding? <a href="#ask" data-home-link>Ask a question</a> — the first conversation costs nothing.</p>
+            <p class="login-back"><a href="#top" data-home-link>&larr; Back to home</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <footer class="site">
       <div class="wrap">
         <div class="foot-grid">
@@ -560,6 +622,47 @@
           ask(q);
         });
       }
+
+      // Login view: swaps the home content for the login page in place.
+      var homeView = document.getElementById("top");
+      var loginView = document.getElementById("loginView");
+      var loginLink = document.getElementById("loginLink");
+      var loginForm = document.getElementById("loginForm");
+      var loginMsg = document.getElementById("loginMsg");
+
+      function showLogin() {
+        homeView.hidden = true;
+        loginView.hidden = false;
+        window.scrollTo(0, 0);
+        document.getElementById("loginEmail").focus();
+      }
+      function showHome() {
+        loginView.hidden = true;
+        homeView.hidden = false;
+      }
+
+      loginLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        showLogin();
+      });
+
+      // Any in-page link other than Login returns to the home view first,
+      // so its anchor target exists when the browser jumps to it.
+      var pageLinks = document.querySelectorAll('a[href^="#"]');
+      for (var m = 0; m < pageLinks.length; m++) {
+        if (pageLinks[m] === loginLink) continue;
+        pageLinks[m].addEventListener("click", function () {
+          if (!loginView.hidden) showHome();
+        });
+      }
+
+      if (window.location.hash === "#login") showLogin();
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        loginMsg.innerHTML = "<strong>Client sign-in is not open yet.</strong> Accounts arrive with the client portal. If you already have a project with Goodding, ask through the guide on the home page and we will get you set up.";
+        loginMsg.classList.add("show");
+      });
     </script>
   </body>
 </html>
