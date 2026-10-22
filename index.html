@@ -112,6 +112,11 @@
         margin: 0 auto 14px; max-width: 20ch;
       }
       .hero h1 .accent { color: var(--blue-dark); }
+      .hero p.mission {
+        font-size: clamp(1.08rem, 2.2vw, 1.3rem); color: var(--ink);
+        font-weight: 600; line-height: 1.45;
+        max-width: 58ch; margin: 0 auto 16px;
+      }
       .hero p.lede {
         font-size: clamp(1.02rem, 2vw, 1.2rem); color: var(--ink-soft);
         max-width: 56ch; margin: 0 auto 34px;
@@ -210,7 +215,7 @@
 
       .steps {
         display: grid; gap: 26px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
         counter-reset: step;
       }
       .step { border-top: 3px solid var(--blue); padding-top: 16px; }
@@ -220,6 +225,21 @@
       }
       .step h3 { margin: 6px 0 8px; font-size: 1.15rem; }
       .step p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+
+      /* ---------- Start here / Audit ---------- */
+      .audit-card {
+        border: 1px solid var(--line); border-left: 5px solid var(--blue);
+        border-radius: var(--radius); background: var(--paper);
+        padding: 28px 30px;
+        display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      }
+      .audit-card h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 800; }
+      .audit-card p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+      .audit-card button.link {
+        flex: none; background: var(--blue); color: #fff; border: 0; cursor: pointer;
+        font: inherit; font-weight: 700; padding: 13px 22px; border-radius: 10px;
+      }
+      .audit-card button.link:hover { background: var(--blue-dark); }
 
       /* ---------- CTA band ---------- */
       .cta-band { background: var(--navy); color: #eaf2f9; }
@@ -336,6 +356,9 @@
       <section class="hero" id="ask">
         <div class="wrap">
           <h1>Ask Goodding.</h1>
+          <p class="mission">
+            AI now decides which businesses customers see first. Goodding&rsquo;s mission is to make AI work for yours: be the company AI recommends, answer every customer instantly, and never miss a lead.
+          </p>
           <p class="lede">
             Goodding LLC designs and builds AI agents, modern websites, and automation
             for businesses — grounded in your own content, approved by you before
@@ -351,10 +374,10 @@
           </form>
 
           <div class="chips" aria-label="Suggested questions">
-            <button type="button" data-q="What AI agents can you build for my business?">What AI agents can you build?</button>
-            <button type="button" data-q="Can you answer customer questions using my own documents?">Answer questions from my documents</button>
-            <button type="button" data-q="Can you migrate and redesign my website?">Migrate &amp; redesign my website</button>
-            <button type="button" data-q="How does a project with Goodding work?">How does a project work?</button>
+            <button type="button" data-q="What is AI Visibility?">What is AI Visibility?</button>
+            <button type="button" data-q="How can an assistant answer my customers?">How can an assistant answer my customers?</button>
+            <button type="button" data-q="What is an AI Readiness Audit?">What is an AI Readiness Audit?</button>
+            <button type="button" data-q="How do AI agents help my business?">How do AI agents help my business?</button>
           </div>
 
           <div class="answer" id="answerPanel" role="status" aria-live="polite">
@@ -381,48 +404,66 @@
           <div class="cards">
             <article class="card">
               <div class="icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h3>AI Visibility</h3>
+              <p>Make sure AI systems can find, read, and quote your company, and report monthly on how AI presents your business.</p>
+              <button class="link" type="button" data-q="What is AI Visibility?">Ask about this &rarr;</button>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 12.5h5"/></svg>
               </div>
-              <h3>AI agents for your website</h3>
-              <p>A conversational agent on your site that answers visitor questions, qualifies leads, and points people to the right page — in your voice, around the clock.</p>
-              <button class="link" type="button" data-q="What AI agents can you build for my business?">Ask about this &rarr;</button>
+              <h3>AI Knowledge Assistant</h3>
+              <p>A website assistant trained only on your approved documents that answers customer questions with sources, around the clock, and hands off to your team when needed.</p>
+              <button class="link" type="button" data-q="How can an assistant answer my customers?">Ask about this &rarr;</button>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M8 7h8M8 11h5"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
               </div>
-              <h3>Knowledge (RAG) assistants</h3>
-              <p>An agent trained on your documents, catalog, and FAQs that answers from your approved sources only — and links back to them, so answers can be checked.</p>
-              <button class="link" type="button" data-q="Can you answer customer questions using my own documents?">Ask about this &rarr;</button>
+              <h3>Lead Capture and Follow-Up Automation</h3>
+              <p>Conversational lead qualification, instant estimate ranges, online booking, and automatic follow-up, so every inquiry gets a response within minutes.</p>
+              <button class="link" type="button" data-q="How do you capture and follow up leads?">Ask about this &rarr;</button>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
               </div>
-              <h3>Website migration &amp; redesign</h3>
-              <p>Move your site to a modern platform and rebuild it clean: configuration, redirects, and a redesign that keeps what works and fixes what doesn&rsquo;t.</p>
-              <button class="link" type="button" data-q="Can you migrate and redesign my website?">Ask about this &rarr;</button>
+              <h3>AI-Ready Websites</h3>
+              <p>Migration and redesign that rebuild your site for people and machines alike: clear structure, structured data, and task-focused pages instead of brochure pages.</p>
+              <button class="link" type="button" data-q="What is an AI-Ready Website?">Ask about this &rarr;</button>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-7-7 18-2.5-7.5z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2"/></svg>
               </div>
-              <h3>Marketing &amp; sales agents</h3>
-              <p>Agents that draft campaigns, follow up with leads, and keep your pipeline moving — each wave reviewed and approved before it runs.</p>
-              <button class="link" type="button" data-q="What can marketing and sales agents do?">Ask about this &rarr;</button>
+              <h3>AI Agents for Automation</h3>
+              <p>AI agents that take on routine work across marketing, sales, and customer support, keeping a person in the loop wherever judgment matters.</p>
+              <button class="link" type="button" data-q="How do AI agents help my business?">Ask about this &rarr;</button>
             </article>
+          </div>
+        </div>
+      </section>
 
-            <article class="card">
-              <div class="icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3z"/></svg>
-              </div>
-              <h3>Care &amp; ongoing support</h3>
-              <p>Post-launch monitoring, agent tuning, and IT support that keeps everything running after go-live — not a handoff and goodbye.</p>
-              <button class="link" type="button" data-q="What happens after launch?">Ask about this &rarr;</button>
-            </article>
+      <!-- Start here -->
+      <section class="block" id="audit" style="padding-top:0">
+        <div class="wrap">
+          <p class="kicker">Start here</p>
+          <h2 class="section-title">Start with an AI Readiness Audit</h2>
+          <p class="section-sub">
+            The entry point for every engagement — a clear picture of where you stand before you commit to a build.
+          </p>
+          <div class="audit-card">
+            <div>
+              <h3>AI Readiness Audit</h3>
+              <p>A fixed starting assessment covering crawler access, an AI-visibility snapshot of your company, and a prioritized action list for your website.</p>
+            </div>
+            <button class="link" type="button" data-q="What is an AI Readiness Audit?">Ask about the audit &rarr;</button>
           </div>
         </div>
       </section>
@@ -433,23 +474,33 @@
           <p class="kicker">Process</p>
           <h2 class="section-title">How it works</h2>
           <p class="section-sub">
-            Every project moves through the same gates. Nothing goes live without your approval.
+            Every project moves through the same five steps. Nothing goes live without your approval.
           </p>
           <div class="steps">
             <div class="step">
               <span class="num">Step 1</span>
-              <h3>Plan &amp; staging</h3>
-              <p>We agree on scope and direction, then build in a staging environment you can review — the live site stays untouched.</p>
+              <h3>AI Readiness Audit</h3>
+              <p>Crawler access, an AI-visibility snapshot of your company, and a prioritized action list for your website.</p>
             </div>
             <div class="step">
               <span class="num">Step 2</span>
-              <h3>Your approval</h3>
-              <p>You review each phase — migration, redesign, each agent — and approve it before the next one starts.</p>
+              <h3>Assess</h3>
+              <p>We review the audit findings with you, agree on priorities and scope, and set the direction for the build.</p>
             </div>
             <div class="step">
               <span class="num">Step 3</span>
-              <h3>Go live &amp; stabilize</h3>
-              <p>Approved work goes live, followed by a monitoring and stabilization period, then ongoing support for as long as you need it.</p>
+              <h3>Build</h3>
+              <p>Work is built in a staging environment you can review — your live site stays untouched while you check every piece.</p>
+            </div>
+            <div class="step">
+              <span class="num">Step 4</span>
+              <h3>Launch</h3>
+              <p>Approved work goes live only with your approval — each phase is signed off by you before it reaches customers.</p>
+            </div>
+            <div class="step">
+              <span class="num">Step 5</span>
+              <h3>Ongoing</h3>
+              <p>Monitoring, updates, and continuous improvement — so your visibility, assistant, and agents keep getting better after launch.</p>
             </div>
           </div>
         </div>
@@ -515,9 +566,11 @@
           <div class="foot-col">
             <h4>Services</h4>
             <ul>
-              <li><a href="#services">AI agents</a></li>
-              <li><a href="#services">Knowledge assistants</a></li>
-              <li><a href="#services">Website migration &amp; redesign</a></li>
+              <li><a href="#services">AI Visibility</a></li>
+              <li><a href="#services">AI Knowledge Assistant</a></li>
+              <li><a href="#services">Lead Capture and Follow-Up Automation</a></li>
+              <li><a href="#services">AI-Ready Websites</a></li>
+              <li><a href="#services">AI Agents for Automation</a></li>
             </ul>
           </div>
           <div class="foot-col">
@@ -541,48 +594,53 @@
       // the same content summarized in the Services section.
       var TOPICS = [
         {
-          keys: ["agent", "chatbot", "chat", "assistant", "build"],
-          title: "AI agents for your business",
-          body: "<strong>Yes.</strong> We build agents that live on your website and work like a tireless front desk: <ul><li><strong>Website agent</strong> — answers visitor questions and guides them to the right page or product.</li><li><strong>Knowledge agent</strong> — answers from your own documents and approved sources, with links back to them.</li><li><strong>Marketing &amp; sales agents</strong> — draft campaigns and follow up with leads, wave by wave, with your approval.</li></ul>Each agent is built and tested in staging first, and goes live only after you approve it."
+          keys: ["visibility", "visible", "quote your", "presents your"],
+          title: "AI Visibility",
+          body: "<strong>AI Visibility</strong> makes sure AI systems can find, read, and quote your company. We check crawler access, structure, and the facts AI pulls about your business — services, hours, locations, and credentials — keep them consistent, and report monthly on how AI presents your business, so you can see whether you are being recommended and described correctly."
         },
         {
-          keys: ["document", "rag", "knowledge", "faq", "catalog", "pdf", "source"],
-          title: "Answers from your own documents",
-          body: "<strong>That is exactly what a knowledge (RAG) agent does.</strong> We connect the agent to your approved content — documents, product catalogs, FAQs, policy pages — and it answers only from those sources, citing the page or document it used. If the answer is not in your sources, the agent says so instead of guessing. You review the source list and test answers in staging before launch."
+          keys: ["knowledge", "assistant answer", "answer my customers", "answer customers", "your approved documents", "document"],
+          title: "AI Knowledge Assistant",
+          body: "<strong>An AI Knowledge Assistant</strong> is a website assistant trained only on your approved documents. It answers customer questions with sources, around the clock, and hands off to your team when needed. If the answer is not in your approved sources, it says so instead of guessing. You review the source list and test answers in staging before launch."
         },
         {
-          keys: ["migrat", "redesign", "website", "godaddy", "wix", "move", "rebuild"],
-          title: "Website migration & redesign",
-          body: "<strong>Yes.</strong> A typical engagement runs in phases: <ul><li><strong>Migration</strong> — move the site to a modern platform with configuration, content, and redirects carried over.</li><li><strong>Redesign</strong> — a clean rebuild of layout and pages, reviewed by you in staging.</li><li><strong>Monitoring</strong> — a watch period after launch to catch anything the move shook loose.</li></ul>Your live site stays up until the new one is approved."
+          keys: ["lead", "capture", "follow up", "follow-up", "follow up leads", "booking", "estimate", "inquiry", "qualif"],
+          title: "Lead Capture and Follow-Up Automation",
+          body: "<strong>Lead Capture and Follow-Up Automation</strong> makes sure every inquiry gets a response within minutes: conversational lead qualification, instant estimate ranges, online booking, and automatic follow-up. Instead of inquiries sitting in an inbox, visitors are qualified, given a next step, and followed up automatically — with your team in the loop."
         },
         {
-          keys: ["marketing", "sales", "lead", "campaign", "follow up", "follow-up"],
-          title: "Marketing & sales agents",
-          body: "<strong>Yes.</strong> After your website agent is stable, we add agents in waves: marketing agents that draft and schedule campaigns, and sales agents that follow up with leads and keep inquiries from going cold. Each wave is reviewed and stabilized before the next begins, so automation never runs ahead of your approval."
+          keys: ["ai-ready", "ai ready", "ready website", "ready websites", "migrat", "redesign", "structured data"],
+          title: "AI-Ready Websites",
+          body: "<strong>AI-Ready Websites</strong> are a migration and redesign that rebuild your site for people and machines alike: clear structure, structured data, and task-focused pages instead of brochure pages — pages built around what visitors actually need to do, like getting an answer, requesting an estimate, or booking. Your live site stays up until the new one is approved."
         },
         {
-          keys: ["after", "launch", "support", "maintenance", "monitor", "care"],
-          title: "After launch",
-          body: "<strong>Launch is the midpoint, not the end.</strong> Every go-live is followed by a monitoring period, then a stabilization phase where agents are tuned against real questions. After that, ongoing IT support keeps the site and agents running — updates, fixes, and improvements handled for you."
+          keys: ["agent", "agents help", "automation", "automate", "routine work"],
+          title: "AI Agents for Automation",
+          body: "<strong>AI Agents for Automation</strong> take on routine work across marketing, sales, and customer support — following up inquiries, qualifying leads, updating records, and preparing drafts and reports. They connect to the tools you already use and keep a person in the loop wherever judgment matters. Each agent is built and tested in staging first, and goes live only after you approve it."
         },
         {
-          keys: ["work", "process", "start", "step", "timeline", "long", "project"],
+          keys: ["audit", "readiness", "assessment"],
+          title: "AI Readiness Audit",
+          body: "<strong>The AI Readiness Audit is the starting point.</strong> It is a fixed starting assessment covering <ul><li><strong>Crawler access</strong> — whether AI systems can actually reach and read your site.</li><li><strong>AI-visibility snapshot</strong> — how AI presents your company today.</li><li><strong>Prioritized action list</strong> — what to fix and build first on your website.</li></ul>It gives you a clear picture before you commit to a larger build."
+        },
+        {
+          keys: ["work", "process", "step", "timeline", "long", "project", "launch", "ongoing"],
           title: "How a project works",
-          body: "Three stages, with approval gates between them: <ul><li><strong>Plan &amp; staging</strong> — scope is agreed, work is built where you can review it safely.</li><li><strong>Approval</strong> — each phase is signed off by you before the next starts.</li><li><strong>Go live &amp; stabilize</strong> — approved work launches, is monitored, and is tuned.</li></ul>Nothing reaches your customers without your go-ahead."
+          body: "Five steps, with approval gates between them: <ul><li><strong>AI Readiness Audit</strong> — crawler access, visibility snapshot, and action list.</li><li><strong>Assess</strong> — priorities and scope agreed with you.</li><li><strong>Build</strong> — built in staging for your review.</li><li><strong>Launch</strong> — goes live only with your approval.</li><li><strong>Ongoing</strong> — monitoring, updates, and continuous improvement.</li></ul>Nothing reaches your customers without your go-ahead."
         },
         {
           keys: ["cost", "price", "pricing", "much", "quote"],
           title: "Pricing",
-          body: "Pricing depends on scope — a single website agent and a full migration-plus-agents program are very different builds — so we fix numbers in a written proposal and statement of work before anything starts. No work begins, and nothing goes live, without your signed approval of that scope and price."
+          body: "Pricing depends on scope — a single assistant and a full website-plus-automation program are very different builds — so we fix numbers in a written proposal and statement of work before anything starts. No work begins, and nothing goes live, without your signed approval of that scope and price."
         },
         {
           keys: ["who", "about", "company", "goodding"],
           title: "About Goodding LLC",
-          body: "<strong>Goodding LLC</strong> is an AI technology company. We migrate and redesign business websites, build AI agents grounded in your own content, and support it all after launch. Our working rule: staged builds, your approval at every gate, and honest limits — we never guarantee rankings, traffic, or placement in AI answers."
+          body: "<strong>Goodding LLC</strong> is an AI technology company. We help B2B and B2C businesses be the company AI recommends, answer every customer instantly, and never miss a lead — through AI Visibility, an AI Knowledge Assistant, lead capture automation, AI-ready websites, and AI agents. Our working rule: staged builds, your approval at every gate, and honest limits — we never guarantee rankings, traffic, or placement in AI answers."
         }
       ];
 
-      var FALLBACK = "I can help with questions about Goodding&rsquo;s work: <strong>AI agents</strong> for your website, <strong>knowledge assistants</strong> that answer from your documents, <strong>website migration &amp; redesign</strong>, <strong>marketing &amp; sales agents</strong>, <strong>pricing</strong>, and <strong>what happens after launch</strong>. Try one of the suggested questions above.";
+      var FALLBACK = "I can help with questions about Goodding&rsquo;s work: <strong>AI Visibility</strong>, the <strong>AI Knowledge Assistant</strong>, <strong>Lead Capture and Follow-Up Automation</strong>, <strong>AI-Ready Websites</strong>, <strong>AI Agents for Automation</strong>, and the <strong>AI Readiness Audit</strong>. Try one of the suggested questions above.";
 
       var form = document.getElementById("askForm");
       var input = document.getElementById("askInput");
