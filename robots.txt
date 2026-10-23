@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI assistant and search crawlers are welcome here.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://rlugoodding.github.io/sitemap.xml

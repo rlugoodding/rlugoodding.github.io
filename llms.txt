@@ -1,0 +1,19 @@
+# Goodding LLC
+
+> Goodding LLC is an AI technology company. Its mission is to make AI work for B2B and B2C businesses: be the company AI recommends, answer every customer instantly, and never miss a lead. Goodding turns a business website into a working channel that answers customers, captures leads, and handles routine work.
+
+## Services
+
+- AI Visibility: Make sure AI systems can find, read, and quote your company. Crawler access and content audits, answer-first page rewrites, consistent company facts across the web, and monthly reporting on how AI presents your business.
+- AI Knowledge Assistant: A website assistant trained only on your approved documents — products, services, policies — that answers customer questions with sources, around the clock, and hands off to your team when a question falls outside its scope.
+- Lead Capture and Follow-Up Automation: Conversational lead qualification, instant estimate ranges, online booking, and automatic follow-up, so every inquiry gets a response within minutes, not days.
+- AI-Ready Websites: Migration and redesign that rebuild your site for people and machines alike: clear structure, structured data, and task-focused pages instead of brochure pages.
+- AI Agents for Automation: AI agents that take on routine work across marketing, sales, and customer support — following up inquiries, qualifying leads, updating records, and preparing drafts and reports — with a person in the loop wherever judgment matters.
+
+## Start Here
+
+- AI Readiness Audit: The entry offer. A defined test of how AI assistants present your business: a customer question set run across the major AI platforms, a website AI-readiness review, a competitor comparison, and a prioritized action plan.
+
+## Links
+
+- Homepage: https://rlugoodding.github.io/
