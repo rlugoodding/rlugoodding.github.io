@@ -1,12 +1,13 @@
 # Goodding LLC
 
-> Goodding LLC is an AI technology company. Its mission is to make AI work for B2B and B2C businesses: be the company AI recommends, answer every customer instantly, and never miss a lead. Goodding turns a business website into a working channel that answers customers, captures leads, and handles routine work.
+> Goodding LLC is an AI technology company. Its mission is to make AI work for B2B and B2C businesses: be the company AI recommends, run a website built for customers and AI, and answer every customer instantly — and train their teams to use AI with confidence.
 
 ## Services
 
 - AI Visibility: Make sure AI systems can find, read, and quote your company. Crawler access and content audits, answer-first page rewrites, consistent company facts across the web, and monthly reporting on how AI presents your business.
-- AI Knowledge Assistant: A website assistant trained only on your approved documents — products, services, policies — that answers customer questions with sources, around the clock, and hands off to your team when a question falls outside its scope.
 - AI-Ready Websites: Migration and redesign that rebuild your site for people and machines alike: clear structure, structured data, and task-focused pages instead of brochure pages.
+- AI Knowledge Assistant: A website assistant trained only on your approved documents — products, services, policies — that answers customer questions with sources, around the clock, and hands off to your team when a question falls outside its scope.
+- AI Consulting and Training: Practical guidance and hands-on training that help your team use AI well: which tools to adopt, how to use them safely, and how to build them into daily work — from a single workshop to ongoing advice as your use of AI grows.
 
 ## Start Here
 
